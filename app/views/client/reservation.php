@@ -1,15 +1,114 @@
 <?php require_once APPROOT.'/views/client/header_client.php'; ?>
 
-<div class="container-fluid">
-<h1 class="text-center mb-5">HI! Mr <?= $_SESSION['nom'];?></h1>
-    <h1 class="text-center">Mes réservations</h1>
-</div>
+
 
 
 <div class="container mt-5 mb-5" id="croisieres">
 
+
+<table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th></th>
+            </tr>
+        </thead>
+        <?php foreach ($data as $croisie) : ?>
+   <div class="row d-flex align-items-center justify-content-between">
+         
+            <tr>
+                <td>
+              
+         <div class="row croisiere mb-5">
+            <div class="col-md-4">
+               <img style="height: 200px;" src="../img/<?= $croisie['image'] ?>" class="card-img-top" alt="...">
+               </div>
+               <div class="col-md-5 p-3">
+                  <h4 style="color: black; font-family: Brush Script MT;" class="card-title">Croisiere:<?= $croisie['nom_crois'] ?></h4><br>
+                  <span style="color: black; class="card-title">nombres des nuit:<?= $croisie['nbr_nuit'] ?></span><br>
+                  <span style="color: black; class="card-title">nom du navire:<?= $croisie['nom_nav'] ?></span><br>
+                  </div>
+                  <div class="col-md-3 text-center p-3" id="prix_div">
+                  <span style="color:#FF8C00; font-family: Verdana, Geneva, Tahoma, sans-serif;" class="card-title">Prix:<?= $croisie['prix'] ?></span><br>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href=" <?= '../Reservations/deleteReservation/'.$croisie['id_reserv'] ?>" class="btn btn-outline-dark mb-3">DELETE</a>
+               </div>
+               </div>
+             </td> 
+             
+            </tr>
+       
+         </div>
+         <?php endforeach; ?>
+     </table>
 </div>
 
+
+   
+
+   
+
+   <section id="clients" class="bg-light">
+      <div class="container">
+         <div class="row gy-4">
+            <div class="col-lg-2 col-md-3 col-6">
+               <img src="<?= URLROOT.'/img/logo1.svg';?>" alt="">
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+               <img src="<?= URLROOT.'/img/logo2.svg';?>" alt="">
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+               <img src="<?= URLROOT.'/img/logo3.svg';?>" alt="">
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+               <img src="<?= URLROOT.'/img/logo4.svg';?>" alt="">
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+               <img src="<?= URLROOT.'/img/logo5.svg';?>" alt="">
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+               <img src="<?= URLROOT.'/img/logo6.svg';?>" alt="">
+            </div>
+         </div>
+      </div>
+   </section>
+<section id="contact">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-4">
+               <img src="<?= URLROOT.'/img/jol.jpg';?>" alt="">
+            </div>
+            <div class="col-lg-6 offset-lg-1">
+               <form>
+                  <div class="mb-3">
+                    <small>Name</small>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                     <small>Email</small>
+                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                   </div>
+                   <div class="mb-3">
+                     <small>Name</small>
+                     <textarea name="" id="" cols="30" rows="4" class="form-control"></textarea>
+                   </div>
+                  <button type="submit" class="btn btn-brand">Submit</button>
+                </form>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="cta" class="py-5">
+      <div class="container py-4">
+         <div class="row justify-content-center">
+            <div class="col-md-6">
+               <h3 class="text-white">Let's do something great.</h3>
+            </div>
+            <div class="col-auto">
+               <a href="#" class="btn btn-light">Get Started</a>
+            </div>
+         </div>
+      </div>
+   </section>
 
 <footer>
       <div class="footer-top">
@@ -68,7 +167,6 @@
    </footer>
    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-<script src="<?= URLROOT.'/js/reservarions.js' ?>"></script>

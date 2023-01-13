@@ -38,8 +38,9 @@ class Reservations extends Controller{
     function getMyreservation(){
         $id_client=$_SESSION['id'];
         $data=$this->reservation->getMyreservation($id_client);
-        echo json_encode($data);
+        $this->view('client/eservation',$data);
     }
+    
 
     function deleteReservation($id_croisiere){
         if($this->reservation->deleteReservation($id_croisiere))

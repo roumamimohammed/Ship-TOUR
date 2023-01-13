@@ -51,7 +51,7 @@
           <li>
           <li>
             <div class="btn-group" id="logout">
-              <button type="button" class="btn btn-danger ">
+              <button type="button" class="btn btn-dark ">
                 <a style="color: white;" href="<?= URLROOT . '/pages/logout' ?>">Log out</a>
               </button>
 
@@ -62,3 +62,14 @@
       </div>
     </div>
   </nav>
+  <section id="home">
+      <div class="container text-center">
+         <div class="row justify-content-center">
+            <div class="col-md-10">
+               <h1 class="text-white display-4">WE ARE CREATIVE AGENCY, CREATIVE PEOPLE</h1>
+               <p class="text-white">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-les</p>
+               <a href="#contact" class="btn btn-brand">Contact</a>
+            </div>
+         </div>
+      </div>
+   </section>

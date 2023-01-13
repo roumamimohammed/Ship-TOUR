@@ -1,23 +1,22 @@
 <?php require_once APPROOT.'/views/client/header_client.php';?>
 
-<div class="container-fluid">
-<h1 class="text-center mb-5">HI! Mr <?= $_SESSION['nom'];?></h1>
-    <h1 class="text-center mb-5">Details croisières</h1>
-</div>
-  <div class="container mb-5">
-    <div class="row croisiere mb-5">
-        <div class="col-md-5 p-3">
-            <p class="nuit"><?= $data['croisiere']['nbr_nuit']?> Nuits</p>
-            <h4 class="title_vg"><?= $data['croisiere']['nom_crois']?></h4>
-            <p><span class="depart_dep">Port de départ :</span><?= ' '.$data['croisiere']['port_dep'].' - '.$data['croisiere']['pays'] ?></p>
-            <p><span class="depart_dep">L'escale à :</span><p>
+  <div style="background-color: black;" class="container-sm rounded-3 ">
+  <div class="row">
+        <div class="col">
+            <p><span style="color: white; font-family: Brush Script MT;">L'escale à :</span><p>
                 <?php foreach($data['trajet'] as $escale): ?>
                     <?= $escale['nom'].'-'.$escale['pays'].'&nbsp'  ?>
                 <?php endforeach ; ?>
             </p></p>
-            <span class="depart_dep">Date :</span><span><?= $data['croisiere']['date_depart'] ?></span>
+            <span style="color: white; font-family: Brush Script MT;">Date :</span><span><?= $data['croisiere']['date_depart'] ?></span>
         </div>
+        <div class="col">
+            <p class="nuit"><?= $data['croisiere']['nbr_nuit']?> Nuits</p>
+            <h4 style="color: white;" class="title_vg">Croisiere:<?= $data['croisiere']['nom_crois']?></h4>
+            <p><span style="color: white; font-family: Brush Script MT;">Port de départ :</span><?= ' '.$data['croisiere']['port_dep'].' - '.$data['croisiere']['pays'] ?></p>
+            </div>
     </div>
+    
   </div>
 
   <div class="container">
@@ -45,7 +44,74 @@
         </table>
     </div>
   </div>
+  
 
+   
+
+   
+
+   <section id="clients" class="bg-light">
+      <div class="container">
+         <div class="row gy-4">
+            <div class="col-lg-2 col-md-3 col-6">
+               <img src="<?= URLROOT.'/img/logo1.svg';?>" alt="">
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+               <img src="<?= URLROOT.'/img/logo2.svg';?>" alt="">
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+               <img src="<?= URLROOT.'/img/logo3.svg';?>" alt="">
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+               <img src="<?= URLROOT.'/img/logo4.svg';?>" alt="">
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+               <img src="<?= URLROOT.'/img/logo5.svg';?>" alt="">
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+               <img src="<?= URLROOT.'/img/logo6.svg';?>" alt="">
+            </div>
+         </div>
+      </div>
+   </section>
+  <section id="contact">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-4">
+               <img src="<?= URLROOT.'/img/jol.jpg';?>" alt="">
+            </div>
+            <div class="col-lg-6 offset-lg-1">
+               <form>
+                  <div class="mb-3">
+                    <small>Name</small>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                     <small>Email</small>
+                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                   </div>
+                   <div class="mb-3">
+                     <small>Name</small>
+                     <textarea name="" id="" cols="30" rows="4" class="form-control"></textarea>
+                   </div>
+                  <button type="submit" class="btn btn-brand">Submit</button>
+                </form>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="cta" class="py-5">
+      <div class="container py-4">
+         <div class="row justify-content-center">
+            <div class="col-md-6">
+               <h3 class="text-white">Let's do something great.</h3>
+            </div>
+            <div class="col-auto">
+               <a href="#" class="btn btn-light">Get Started</a>
+            </div>
+         </div>
+      </div>
+   </section>
 
   <footer>
       <div class="footer-top">

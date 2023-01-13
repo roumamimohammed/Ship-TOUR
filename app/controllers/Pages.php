@@ -69,6 +69,7 @@ class Pages extends Controller{
         }
     }
     
+    
     public function port(){  
         if(isset($_SESSION['id']) && $_SESSION['role']==2){
             $data=$this->port->getPorts();
@@ -120,7 +121,9 @@ class Pages extends Controller{
     
     public function reservation_client(){  
         if(isset($_SESSION['id']) && $_SESSION['role']==1){
-            $this->view('client/reservation');
+            $id_client=$_SESSION['id'];
+            $data=$this->reservation->getMyreservation($id_client);
+            $this->view('client/reservation',$data);
         }
         else{
             header('location:../pages/login');
