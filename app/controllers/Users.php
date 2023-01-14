@@ -11,7 +11,7 @@ class Users extends Controller{
             extract($_POST);
             $hashed_pass=password_hash($pass,PASSWORD_DEFAULT);
             if($this->user->register($nom,$prenom,$email,$hashed_pass)==true){
-                echo 'added';
+                header('location:'.URLROOT.'/pages/login');
                
             }
         }
@@ -24,9 +24,14 @@ class Users extends Controller{
           $data;
           if ($_SESSION['role']==2) {
             $this->view('/admin/index');
-          }
-          else{
-          $this->view('/client/croisiere');
+          }else
+
+          if ($_SESSION['role']==1) {
+            $this->view('/client/croisiere');
+          }else
+        {
+            
+            header('location:'.URLROOT.'/pages/login');
         }}
     }
 }

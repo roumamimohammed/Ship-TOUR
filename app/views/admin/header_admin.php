@@ -51,7 +51,7 @@
             </li>
              <li>
                 <div class="btn-group" id="logout">
-                    <button type="button" class="btn btn-danger "  >
+                    <button type="button" class="btn btn-dark "  >
                     <a style="color: white;"  href="<?= URLROOT.'/pages/logout'?>">Log out</a>
                     </button>
                 
@@ -61,3 +61,4 @@
         </div>
       </div>
     </nav>
+ 

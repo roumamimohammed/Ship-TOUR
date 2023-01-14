@@ -32,19 +32,19 @@
     </div>
     <form   class="register" action="<?php echo URLROOT; ?>/Users/register" method="POST">
     <div class="input_field">
-     <input type="text" value="" name="nom" placeholder="nom" class="input" >
+     <input type="text" value="" name="nom" placeholder="nom" class="input" required>
    </div>
    <div class="input_field">
-     <input type="text" value="" name="prenom" placeholder="prenom" class="input" >
+     <input type="text" value="" name="prenom" placeholder="prenom" class="input" required>
    </div>
    <div class="input_field">
-     <input type="email" value="" name="email" placeholder="email" class="input" >
+     <input type="email" value="" name="email" placeholder="email" class="input" required>
    </div>
    <div class="input_field">
-     <input type="password" value="" name="pass" placeholder="Pass" class="input" >
+     <input type="password" value="" name="pass" placeholder="Pass" class="input" required >
    </div>
   
-   <button type="submit" class="btn">Register</button>
+   <button type="submit" class="btn btn-outline-dark rounded"><span style="color: white;">Register</span></button>
    
 
     </form>

@@ -57,7 +57,7 @@
                <img style="height: 200px;" src="../img/<?= $croisie['image'] ?>" class="card-img-top" alt="...">
                </div>
                <div class="col-md-5 p-3">
-                  <h4 style="color: red; font-family: Brush Script MT;" class="card-title">Croisiere:<?= $croisie['nom_crois'] ?></h4><br>
+                  <h4 style="color: black; font-family: Brush Script MT;" class="card-title">Croisiere:<?= $croisie['nom_crois'] ?></h4><br>
                   <span style="color: black; class="card-title">nombres des nuit:<?= $croisie['nbr_nuit'] ?></span><br>
                   <span style="color: black; class="card-title">nom du navire:<?= $croisie['nom_nav'] ?></span><br>
                   <span class="depart_dep">Date :</span><span><?= $croisie['date_depart'] ?></span>
@@ -65,7 +65,7 @@
                   <div class="col-md-3 text-center p-3" id="prix_div">
                   <span style="color:#FF8C00; font-family: Verdana, Geneva, Tahoma, sans-serif;" class="card-title">Prix:<?= $croisie['prix'] ?></span><br>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href=" <?= '../Reservations/show/'.$croisie['id_croisiere'] ?>" class="btn btn-outline-primary mb-3">Go</a>
+                  <a href=" <?= '../Reservations/show/'.$croisie['id_croisiere'] ?>" class="btn btn-outline-dark mb-3">Go</a>
                </div>
                </div>
              </td> 
